@@ -6,7 +6,8 @@
   <title>Каталог - Седона</title>
 </head>
 <body>
-<header>
+<!-- Шапка сайта -->
+<header data-test="header">
   <h1>Каталог</h1>
   <nav>
     <ul>
@@ -16,8 +17,22 @@
     </ul>
   </nav>
 </header>
-<main>
-  <section>
+
+<!-- Основное содержимое -->
+<main data-test="main">
+  <!-- Блок с фильтрами -->
+  <section data-test="filter">
+    <h2>Фильтры</h2>
+    <!-- Тут могли бы быть чекбоксы/слайдер цены и т.д. -->
+    <form action="#" method="GET">
+      <label for="filter-price">Цена до:</label>
+      <input type="number" id="filter-price" name="price-max">
+      <button type="submit">Применить</button>
+    </form>
+  </section>
+
+  <!-- Блок каталога (список отелей) -->
+  <section data-test="catalog">
     <h2>Предложения</h2>
     <ul>
       <li>
@@ -37,8 +52,20 @@
       </li>
     </ul>
   </section>
+
+  <!-- Блок подписки (если требование сохраняется) -->
+  <section data-test="subscribe">
+    <h2>Подписка на рассылку</h2>
+    <form action="#" method="POST">
+      <label for="email-subscribe-catalog">Введите E-mail:</label>
+      <input type="email" id="email-subscribe-catalog" name="email" placeholder="you@example.com">
+      <button type="submit">Подписаться</button>
+    </form>
+  </section>
 </main>
-<footer>
+
+<!-- Подвал сайта -->
+<footer data-test="footer">
   <p>&copy; 2024 Седона. Все права защищены.</p>
 </footer>
 </body>
